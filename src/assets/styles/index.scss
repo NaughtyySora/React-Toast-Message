@@ -44,36 +44,4 @@ a {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  gap: 3rem;
-
-  &-form {
-    max-width: 70%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-
-    &-btn {
-      display: block;
-      border: none;
-      outline: none;
-      background-color: var(--green_1);
-      color: var(--white_1);
-      border-radius: 0.25rem;
-      font-size: var(--fSize16);
-      font-weight: 600;
-      margin: 0 auto;
-      text-align: center;
-      cursor: pointer;
-      transition: filter 0.3s ease;
-      padding: 0.75rem 2.5rem;
-
-      &:hover,
-      &:focus {
-        filter: brightness(80%);
-      }
-    }
-  }
 }

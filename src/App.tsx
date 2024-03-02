@@ -1,4 +1,5 @@
-import { Toaster } from "./assets/styles/components/Toaster/Toaster";
+import { Toaster } from "./components/Toaster/Toaster";
+
 
 function App() {
   return (
