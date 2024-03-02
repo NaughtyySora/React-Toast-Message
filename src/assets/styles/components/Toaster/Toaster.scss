@@ -1,0 +1,53 @@
+.Toaster {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 1.5rem;
+
+  a {
+    color: var(--blue_2);
+    font-size: var(--fSize20);
+    margin: 0.5rem 0;
+    display: block;
+  }
+
+  &-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    button {
+      padding: 0.5rem 1.5rem;
+      color: var(--white_1);
+      border-radius: 5px;
+      font-size: var(--fSize20);
+      cursor: pointer;
+      transition: filter .25s ease;
+
+      &:hover{
+        filter: brightness(85%);
+      }
+
+      &.success {
+        background-color: var(--green_1);
+      }
+
+      &.error {
+        background-color: var(--red_1);
+      }
+
+      &.info {
+        background-color: var(--blue_2);
+      }
+
+      &.warning {
+        background-color: var(--orange_2);
+      }
+    }
+  }
+}

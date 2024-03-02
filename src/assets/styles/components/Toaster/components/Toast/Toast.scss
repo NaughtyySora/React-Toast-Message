@@ -1,0 +1,67 @@
+$colors: (
+  info: var(--blue_2),
+  warning: var(--orange_1),
+  success: var(--green_1),
+  error: var(--red_1)
+);
+
+.Toast {
+  position: relative;
+  width: 350px;
+  padding: 1.25rem;
+  background-color: var(--black_1);
+  color: var(--white_1);
+  border-radius: 2px;
+  font-size: var(--fSize16);
+  font-weight: 400;
+  transform: translateX(200%);
+  transition: transform .3s ease, outline .1s ease;
+
+  &:hover {
+    outline-width: 3px !important;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  @each $name, $color in $colors {
+    #{"&.#{$name}"} {
+      outline: 1px solid $color;
+
+      .Toast-level,
+      .Toast-close::before {
+        color: $color;
+      }
+    }
+  }
+
+  &:not(&:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &-level {
+    font-size: var(--fSize18);
+    font-weight: 500;
+    margin-bottom: .75rem;
+    text-transform: capitalize;
+    line-height: 1.1;
+  }
+
+  &-close {
+    padding: 0.5rem;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    cursor: pointer;
+    margin: 0.25rem;
+
+    &::before {
+      content: "\271A";
+      font-size: var(--fSize28);
+      transform: rotate(45deg);
+      list-style: 1;
+      display: inline-block;
+    }
+  }
+}
